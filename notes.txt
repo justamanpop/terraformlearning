@@ -1,0 +1,15 @@
+good practice to have separate network.tf file for network related conf, separate file for variables, 
+separate for provider called provider.tf. makes code more organized and more easily readable.
+
+so aws_vpc can be a data source as well as a resource. to use it as data source, you only have to specify it's 
+ID (this can be gotten from aws console).
+
+oh yeah, only for referring to resource, no need for resource.type.name, just type.name will do, for rest, you 
+need to specify for e.g: data.aws_vpc.id. note that data source is read only, and to modify existing resources,
+we'd have to use import. 
+
+configuring backend tells terraform where to look for state file.
+
+terraform workspaces- multiple state files, but same conf (.tf) files. what happens is you can have conditional
+behaviour in your conf files based on current workspace (which is accessible through a special variable in 
+terraform)
