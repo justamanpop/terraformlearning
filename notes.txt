@@ -13,3 +13,5 @@ configuring backend tells terraform where to look for state file.
 terraform workspaces- multiple state files, but same conf (.tf) files. what happens is you can have conditional
 behaviour in your conf files based on current workspace (which is accessible through a special variable in 
 terraform)
+
+note, can't use count with module, can pass it a number so that module internally uses it as count though.
