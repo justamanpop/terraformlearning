@@ -8,7 +8,7 @@ module "myvpcmodule" {
   source  = "justamanpop/vpc-module/aws"
   version = "1.0.0"
   # insert the 2 required variables here
-  vpc_id             = "vpc-0b1cac61492195bc6"
+  vpc_id             = "vpc-4237b83f"
   subnet_name_prefix = "anish-private"
 }
 
