@@ -4,7 +4,7 @@ provider "aws" {
 
 terraform {
   backend "s3" {
-    bucket = "globaluniqbucket"
+    bucket = "globaluniqbucket2"
     key    = "anish/mystate"
     region = "us-east-1"
   }
